@@ -1,38 +1,133 @@
-.App {
-  text-align: center;
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: content-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.img{
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 65vh;
+
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.icons-bg{
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  float: right;
+  width: 100vw;
+  justify-content:space-between;
+  position: absolute;
+  font-size: 16px;
+  top: 15px;
   color: white;
+  z-index:11;
+  font-weight: bold;
 }
 
-.App-link {
-  color: #61dafb;
+.icons-bg  .div1{
+  width: 25vw;
+  display: flex;
+  padding-left: 10px;
+  justify-content: space-around;
+}
+.icons-bg  .div2{
+  width: 30vw;
+  display: flex;
+  justify-content: space-evenly;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+
+.heading-zomato{
+  filter: drop-shadow(0.5px 0.5px 3px rgb(248, 131, 131));
+  position: absolute;
+  top: 14%;
+  margin: 0px 50%;
+  transform: translate(-50%,50%);
+}
+
+
+.heading-zomato img{
+  width: 280px;
+}
+
+h3{
+  font-size: 26px;
+  text-align: center;
+  color: white;
+  width: 100vw;
+  font-weight: bold;
+}
+
+.input-search{
+  position: absolute;
+  top:30%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.input{
+  display: flex;
+  margin-top: 20px ;
+}
+
+.input select , .input input{
+  font-size: 16px;
+  border: none;
+  outline: none;
+  border-radius: 5px;
+  padding: 5px;
+}
+
+.input select{
+  min-width: 100px;
+  /* height: 50px; */
+}
+
+.input input{
+  min-width: 300px;
+  height: 40px;
+}
+
+.input input::placeholder{
+  padding-left: 5px ;
+}
+
+
+.color-b{
+  color:white;
+  text-decoration: none;
+}
+
+
+@media screen and (max-width:776px) {
+  .input{
+    flex-direction: column;
+    align-items: center;
+    padding: 0;
   }
-  to {
-    transform: rotate(360deg);
+
+  .input input , .input select {
+    min-width: 70vw;
+  } 
+
+}
+
+
+@media screen and (max-width:576px) {
+  .icons-bg , .div1 , .div2{
+    flex-direction: column;
+    align-items: center;
+    width: 98vw;
   }
+  span{
+    display: block;
+    width: 98vw;
+    text-align: center;
+    margin-top: 2px;
+  }
+  
+
 }
